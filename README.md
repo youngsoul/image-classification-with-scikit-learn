@@ -6,6 +6,8 @@ Test to see if using a ClipEncoder with Scikit-Learn can produce similar results
 
 ### TL;DR
 
+Using a ClipEncoder along with Scikit-Learn performed significantly better than many Keras models.
+
 The very best accuracy achieved from the Project leaderboard was `0.97560`.
 
 Using the techniques outlined in this project, I was able to achieve  an accuracy of `0.9969`.
