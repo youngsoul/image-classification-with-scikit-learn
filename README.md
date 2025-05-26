@@ -81,6 +81,15 @@ horse        1         0    498       0
 spider       0         0      0     496
 
 ```
+## Dimensionality Reduction
+
+Using `umap-learn` reduce the training embedding dimension from 512 to 2 to create a scatter plot to see if the embeddings create distinct clustering per label.
+
+
+![umap](./media/umap.png)
+
+As you can see the reduced dimensions of the embeddings clearly show distinct clusters around the labels.
+
 
 ## Summary
 
@@ -89,6 +98,11 @@ From the experiment above, that using a ClipEncoder with Scikit-Learn for a clas
 The approach is much simplier to understand, faster to setup, infinitely faster to execute and produces superior results.
 
 ## Resources
+
+### Articles
+
+* https://towardsdatascience.com/clip-creating-image-classifiers-without-data-b21c72b741fa/?sk=88fdd2c1a132538015968df3f49b64b1
+* 
 
 ### YouTube
 
