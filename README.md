@@ -102,7 +102,8 @@ The approach is much simplier to understand, faster to setup, infinitely faster 
 ### Articles
 
 * https://towardsdatascience.com/clip-creating-image-classifiers-without-data-b21c72b741fa/?sk=88fdd2c1a132538015968df3f49b64b1
-* 
+
+* https://openai.com/index/clip/
 
 ### YouTube
 
