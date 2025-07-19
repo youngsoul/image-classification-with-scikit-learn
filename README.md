@@ -189,5 +189,38 @@ Then it's passed through the image encoder (like a modified ResNet or Vision Tra
 The encoder outputs a vector of numbers (the embedding) that represents only the visual content of the image.
 
 
+## Zero Shot Classification
 
+Zero shot means there is no training phase.  Instead we compare the image embedding vector to the target label embedding vector and determine the cosine similarity between the two to 'predict' the label.
+
+Below is the results of the training/validation dataset
+
+```text
+Training Shape: (3997, 2)
+Validation Shape: (786, 2)
+All Training Shape: (4783, 2)
+Total training images: 4783
+(4783, 512)
+(4783,)
+Training / Validation Dataset Accuracy: 99.25%
+
+```
+
+### Zero Shot Test Submission Accuracy
+
+```text
+Test Zero Shot model
+Submission Accuracy: 99.69%
+
+Confusion Matrix:
+Predicted  cow  elephant  horse  spider
+Actual                                 
+cow        420         0      4       0
+elephant     0       220      0       0
+horse        0         0    499       0
+spider       0         0      1     495
+
+Total time: 30.971018075942993
+
+```
 

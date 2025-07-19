@@ -18,9 +18,6 @@ import os
 target_dirs = ['cow', 'elephant', 'horse', 'spider']
 root_dir = str(Path(__file__).parent.resolve()) + "/dataset"
 
-import pandas as pd
-
-
 def evaluate_classification_results(submission_results_df: pd.DataFrame) -> None:
     if not {'CLASS', 'TRUE_CLASS', 'CORRECT'}.issubset(submission_results_df.columns):
         raise ValueError("DataFrame must contain 'CLASS', 'TRUE_CLASS', and 'CORRECT' columns.")
