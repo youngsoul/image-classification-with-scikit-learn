@@ -14,6 +14,25 @@ target_dirs = ['cow', 'elephant', 'horse', 'spider']
 root_dir = str(Path(__file__).parent.resolve()) + "/dataset"
 target_encodings = {}
 
+import numpy as np
+
+def softmax_from_cosine_similarities(similarities):
+    """
+    Converts a list of cosine similarities to softmax probabilities.
+
+    Args:
+        similarities (list or np.ndarray): A list or array of cosine similarity scores.
+
+    Returns:
+        np.ndarray: Softmax probabilities.
+    """
+    similarities = np.array(similarities)
+    # Subtract max for numerical stability
+    exp_values = np.exp(similarities - np.max(similarities))
+    softmax_probs = exp_values / np.sum(exp_values)
+    return softmax_probs
+
+
 def evaluate_classification_results(submission_results_df: pd.DataFrame) -> None:
     if not {'CLASS', 'TRUE_CLASS', 'CORRECT'}.issubset(submission_results_df.columns):
         raise ValueError("DataFrame must contain 'CLASS', 'TRUE_CLASS', and 'CORRECT' columns.")
